@@ -1,0 +1,75 @@
+.home {
+  box-sizing: border-box;
+  padding-top: 40px;
+  background-color: #00000003;
+  height: 100vh;
+  margin: auto;
+  max-width: 1024px;
+  width: 100%;
+
+  .tips{
+    margin: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .products {
+    padding: 0 10px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    .product {
+      cursor: pointer;
+      .imgWrapp {
+        box-sizing: border-box;
+        background-color: rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .title {
+        text-align: center;
+        font-weight: 700;
+      }
+      .content {
+        text-align: center;
+        font-size: 13px;
+      }
+    }
+
+    // 媒体查询：当屏幕宽度小于600px时
+    @media screen and (max-width: 600px) {
+      .product {
+        width: calc(50% - 16px);
+        img {
+          height: 90px;
+        }
+      }
+    }
+
+    // 媒体查询：当屏幕宽度在400px到600px之间时
+    @media screen and (min-width: 600px) and (max-width: 800px) {
+      .product {
+        width: calc(33% - 16px);
+        img {
+          height: 110px;
+        }
+      }
+    }
+
+    // 媒体查询：当屏幕宽度大于800px时
+    @media screen and (min-width: 800px) {
+      .product {
+        width: calc(25% - 16px);
+        img {
+          height: 130px;
+        }
+      }
+    }
+  }
+}
